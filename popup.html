@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Library Search Plugin Public</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="js/gtm.js"></script> If you use Google Tag Manager, uncomment this line-->
+    <script type="text/javascript" src="js/options.js"></script>
+</head>
+
+<body class="main">
+    <!-- <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=******" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript> if you use Google Tag Manager uncomment this section and adapt your id -->
+    <div id="container" class="initialized">
+        <div id="branding">
+            <div id="logo">
+                <a href="https://www.addyourlibrarywebsitehere.com" target="_blank"> <!-- add a link to your library's website here -->
+                    <img alt="" src="images/icons/university_logo.png"> <!-- don't forget your logo! -->
+                </a>
+            </div>
+            <div id="title">
+                <h1>Library Search Plugin Public</h1>
+                <!-- update with your plugin's name -->
+            </div>
+        </div>
+        <div id="searchContainer" class="header">
+            <div class="searchInputContainer">
+                <input id="searchInput" class="dialogInput searchInput" type="text" placeholder="Books, articles, databases..." /><br>
+                <form>
+                    <p>Choose where to search:</p>
+                    <input type="radio" name="chooseone" id="library"><label for="library"> University Catalogue</label><br>
+                    <input type="radio" name="chooseone" id="scholar"><label for="scholar"> Google Scholar</label><br>
+                    <input type="radio" name="chooseone" id="worldcat"><label for="worldcat"> WorldCat</label><br>
+                    <input type="radio" name="chooseone" id="pubmed"><label for="pubmed"> PubMed</label><br>
+                </form>
+                <br>
+                <input type="submit" id="btnOpenNewTab" value="search" />
+            </div>
+        </div>
+        <div id="instructions">
+            <h3>How to use this assistant</h3>
+            <p>Type your query in the search box, choose your favourite search engine, press enter or "search"!</p>
+            <h3>or</h3>
+            <p>Select terms in the text you are reading and search using the right-click Library Search Plugin Public menu.</p>
+        </div>
+    </div>
+</body>
+
+</html>
