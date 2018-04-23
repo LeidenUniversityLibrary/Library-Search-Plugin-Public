@@ -1,15 +1,14 @@
 {
     "manifest_version": 2, // do not delete unless you know what you are doing! :)
 
-    "name": "Library Search Plugin Public", // Rename with your chosen title
-    "description": "Search the your University Catalogue at any moment without leaving your current page!", // Modify this text to explain what this plugin is about
+    "name": "Library Search Plugin PUMC", // Rename with your chosen title
++   "description": "Search your University Catalogue at any moment without leaving your current page!", // Modify this text to explain what this plugin is about
     "version": "1.0.0",
-    "author": "Giulio Menna, Leiden University Libraries", // I am the original author of this plugin, but you may change the name to your library's, or a department, etc. Remember to mention us somewhere as the source of this code though!
-    "content_security_policy": "script-src 'self' https://www.google-analytics.com https://ssl.google-analytics.com https://code.jquery.com/ https://www.googletagmanager.com; object-src 'self'", // Delicate point: you may remove references to Google Analytics and Google Tag manager if you do not use them, but you will need code.jquery.com!
+    "author":  "L.Liu, Peking Union Medical College Library",  "script-src 'self' https://code.jquery.com/; object-src 'self'", // Delicate point: you may remove references to Google Analytics and Google Tag manager if you do not use them, but you will need code.jquery.com!
     "browser_action": {
         "default_icon": "/images/icons/icon128.png", // see "icons" section hereunder
         "default_popup": "popup.html", // do not delete unless you know what you are doing! :)
-        "default_title": "Library Search Plugin Public" // Rename with your chosen title
+        "default_title": "Library Search Plugin PUMC" // Rename with your chosen title
     },
     "icons": {
         "16": "/images/icons/icon16.png", // the following lines determine the way your icons look. Square icons only; 16x16px, 48x48px, 128x128px
@@ -22,6 +21,5 @@
     "permissions": [
     "contextMenus", // allows the plugin to use context menus when the user right-clicks
     "activeTab" // see https://developer.chrome.com/extensions/activeTab - do no remove!
-    // "https://www.googletagmanager.com/" if your library uses GTM, keep this here. If not, feel free to delete this line
   ]
 }
