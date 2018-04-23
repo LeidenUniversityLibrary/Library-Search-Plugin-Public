@@ -6,13 +6,11 @@
     "version": "1.0.0",
     "author":  "L.Liu, Peking Union Medical College Library",  "script-src 'self' https://code.jquery.com/; object-src 'self'", // Delicate point: you may remove references to Google Analytics and Google Tag manager if you do not use them, but you will need code.jquery.com!
     "browser_action": {
-        "default_icon": "/images/icons/icon128.png", // see "icons" section hereunder
+        "default_icon": "Library-Search-Plugin-Public/images/icons/IMI-green.png", // see "icons" section hereunder
         "default_popup": "popup.html", // do not delete unless you know what you are doing! :)
         "default_title": "Library Search Plugin PUMC" // Rename with your chosen title
     },
     "icons": {
-        "16": "/images/icons/icon16.png", // the following lines determine the way your icons look. Square icons only; 16x16px, 48x48px, 128x128px
-        "48": "/images/icons/icon48.png", // you will have to generate these icons yourself.
         "128": "/images/icons/icon128.png" 
     },
     "background": {
