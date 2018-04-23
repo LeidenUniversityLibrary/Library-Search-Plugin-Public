@@ -26,37 +26,37 @@ $(document).ready(function () {
         if (
             $('#library').is(":checked")) {
             //change this url to match your library's! Here is Leiden's URL as an example for ExLibris Primo users - Old UI!
-            var newLibraryURL = 'http://catalogue.leidenuniv.nl/primo_library/libweb/action/search.do?fn=search&ct=search&initialSearch=true&mode=Basic&tab=all_content&indx=1&dum=true&srt=rank&vid=UBL_V1&frbg=&tb=t&scp.scps=scope%3A%28UBL_DSPACE%29%2Cscope%3A%28"UBL"%29%2Cscope%3A%28UBL_DTL%29%2Cscope%3A%28UBL_ALMA%29%2Cprimo_central_multiple_fe&vl%28freeText0%29=' + searchstring + '&source=LibrarySearchPluginPunblic'; //you can modofy &source to anything you like. This is useful to see how many users are coming to your catalogue via the plugin, in Google Analytics.
-            // Create the new tab
+            var newLibraryURL = 'http://discovery.imicams.ac.cn/primo_library/libweb/action/search.do?dscnt=0&scp.scps=scope%3A%28%22IMICAMS%22%29%2Cprimo_central_multiple_fe&frbg=&tab=default_tab&dstmp=1524468383395&srt=rank&ct=search&mode=Basic&dum=true&indx=1&tb=t&vl%28freeText0%29=&fn=search&vid=imicams'+ searchstring + '&source=LibrarySearchPluginPUMC'; //you can modofy &source to anything you like. This is useful to see how many users are coming to your catalogue via the plugin, in Google Analytics.
+-            // Create the new tab
             chrome.tabs.create({
                 url: newLibraryURL
             });
         }
-        //Worldcat
+        //Opac
         if (
-            $('#worldcat').is(":checked")) {
-            //alert("WorldCat checked");
-            var newWorldcatURL = 'https://www.worldcat.org/search?q=' + searchstring;
+            $('#opac').is(":checked")) {
+            //alert("Opac checked");
+            var newOpacURL = 'http://opac.imicams.ac.cn:8090/opac/search.php=' + searchstring;
             // Create the new tab
             chrome.tabs.create({
-                url: newWorldcatURL
+                url: newOpacURL
             });
         }
-        //Google Scholar
+        //Baidu
         if (
-            $('#scholar').is(":checked")) {
-            //alert("Google Scholar checked");
-            var newScholarURL = 'https://scholar.google.com/scholar?q=' + searchstring;
+            $('#baidu').is(":checked")) {
+            //alert("Baidu checked");
+            var newBaiduURL = 'https://www.baidu.com/s?wd=' + searchstring;
             // Create the new tab
             chrome.tabs.create({
-                url: newScholarURL
+                url: newBaiduURL
             });
         }
         //Pubmed
         if (
             $('#pubmed').is(":checked")) {
-            //alert("Google Scholar checked");
-            var newPubmedURL = 'https://ezproxy.someuniversity.com/login?url=https://www.ncbi.nlm.nih.gov/pubmed/?term=' + searchstring; // if you use EzProxy, modify the URL here. You may also remove the EzProxy prefix compeltely.
+            //alert("PubMed checked");
+            var newPubmedURL = 'https://www.ncbi.nlm.nih.gov/pubmed/?term=' + searchstring; // if you use EzProxy, modify the URL here. You may also remove the EzProxy prefix compeltely.
             // Create the new tab
             chrome.tabs.create({
                 url: newPubmedURL
@@ -77,21 +77,21 @@ var searches = [
         url: "http://catalogue.leidenuniv.nl/primo_library/libweb/action/search.do?fn=search&ct=search&initialSearch=true&mode=Basic&tab=all_content&indx=1&dum=true&srt=rank&vid=UBL_V1&frbg=&tb=t&scp.scps=scope%3A%28UBL_DSPACE%29%2Cscope%3A%28%22UBL%22%29%2Cscope%3A%28UBL_DTL%29%2Cscope%3A%28UBL_ALMA%29%2Cprimo_central_multiple_fe&vl%28freeText0%29=%s&source=LibrarySearchPluginPublic"
   },
     {
-        title: "Search in WorldCat",
-        url: "https://www.worldcat.org/search?q=%s"
+        title: "Search in OPAC",
+        url: "http://opac.imicams.ac.cn:8090/opac/search.php=%s"
   },
     {
-        title: "Search in Google Scholar",
-        url: "https://scholar.google.com/scholar?q=%s"
+        title: "Search in Baidu",
+        url: "https://www.baidu.com/s?wd=%s"
   },
     {
         title: "Search in PubMed", // Again: remove or adapt your ezproxy URL
-        url: "https://ezproxy.someuniversity.com/login?url=https://www.ncbi.nlm.nih.gov/pubmed/?term=%s"
+        url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=%s"
   }
 ];
 // Create a parent item and two children.
 var parent = chrome.contextMenus.create({
-    "title": "Search with Library Search Plugin Public", // Change the name here too!
+    "title": "Search with Library Search Plugin PUMC", // Change the name here too!
     "id": "0",
     "contexts": ["selection"]
 });
