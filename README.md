@@ -5,7 +5,7 @@
 The Library Search Plugin plugin allows users (students, researchers, etc.) to **search your library's catalogue, Google Scholar, WorldCat, or PubMed, without having to navigate to the respective websites first!**
 It also comes with a **neat context menu that allows users to select text, right-click, and search!**
 
-This is a clean version of the [Leiden Search Assistant plugin](https://chrome.google.com/webstore/detail/leiden-search-assistant/dillijfbjhoiokfgjbngplcfggkkdnbn) that can be adapted and used by any library.
+This is a clean version of the [Leiden Search Assistant plugin](https://chrome.google.com/webstore/detail/leiden-search-assistant/dillijfbjhoiokfgjbngplcfggkkdnbn) that can be adapted and used by any library. The plugin is compatible with Google Chrome, Opera, and Firefox.
 
 ## General information and how-to
 
