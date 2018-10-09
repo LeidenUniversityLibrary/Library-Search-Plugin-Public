@@ -25,7 +25,7 @@ $(document).ready(function () {
         //Library Catalogue
         if (
             $('#library').is(":checked")) {
-            //change this url to match your library's! Here is Leiden's URL as an example for ExLibris Primo users - Old UI!
+            //change this url to match your library's! Here is Leiden's URL as an example for ExLibris Primo users - Old UI! But the same logic applies for Primo NEW UI
             var newLibraryURL = 'http://catalogue.leidenuniv.nl/primo_library/libweb/action/search.do?fn=search&ct=search&initialSearch=true&mode=Basic&tab=all_content&indx=1&dum=true&srt=rank&vid=UBL_V1&frbg=&tb=t&scp.scps=scope%3A%28UBL_DSPACE%29%2Cscope%3A%28"UBL"%29%2Cscope%3A%28UBL_DTL%29%2Cscope%3A%28UBL_ALMA%29%2Cprimo_central_multiple_fe&vl%28freeText0%29=' + searchstring + '&source=LibrarySearchPluginPunblic'; //you can modofy &source to anything you like. This is useful to see how many users are coming to your catalogue via the plugin, in Google Analytics.
             // Create the new tab
             chrome.tabs.create({
@@ -56,7 +56,7 @@ $(document).ready(function () {
         if (
             $('#pubmed').is(":checked")) {
             //alert("Google Scholar checked");
-            var newPubmedURL = 'https://ezproxy.someuniversity.com/login?url=https://www.ncbi.nlm.nih.gov/pubmed/?term=' + searchstring; // if you use EzProxy, modify the URL here. You may also remove the EzProxy prefix compeltely.
+            var newPubmedURL = 'https://www.ncbi.nlm.nih.gov/pubmed/?otool=YOURINSTITUTIONPUBMEDID&term=' + searchstring; // Pubmed uses "otool" to add openurls links on the website. Replace YOURINSTITUTIONPUBMEDID with, well, your institution's pubmed id. Or google "pubmed otool" for more info
             // Create the new tab
             chrome.tabs.create({
                 url: newPubmedURL
@@ -85,8 +85,8 @@ var searches = [
         url: "https://scholar.google.com/scholar?q=%s"
   },
     {
-        title: "Search in PubMed", // Again: remove or adapt your ezproxy URL
-        url: "https://ezproxy.someuniversity.com/login?url=https://www.ncbi.nlm.nih.gov/pubmed/?term=%s"
+        title: "Search in PubMed", // Again: remove or adapt your pubmed id hereunder
+        url: "https://www.ncbi.nlm.nih.gov/pubmed/?otool=YOURINSTITUTIONPUBMEDID&term=%s"
   }
 ];
 // Create a parent item and two children.
