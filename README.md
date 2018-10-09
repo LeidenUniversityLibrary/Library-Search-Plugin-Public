@@ -19,6 +19,9 @@ Yes, of course! **The code is provided under a GNU General Public License (v3)**
 4. Create your icons - You will have to create some icons in images/icons. Some placeholder images are in place when you download this repository. - more info: https://developer.chrome.com/apps/manifest/icons
 5. (optional) Edit the fonts - At Leiden we use the "Vestula" font, but you can change it to something else. Scroll down for instructions.
 
+### Wait, the link is for Primo Old UI, but my library is using Primo New UI! Will it work still? What do I have to change to make it work?
+Yes, it will work. Perform a search in your Library's catalogue with the new Primo interface active. Copy the resulting URL and replace the term you have searched with the variable in the code. Don't worry, look at options.js and you will see what I mean.
+
 ### "I have adapted the code and I am ready to go! How do I test the code on Chrome? How do I publish the plugin on the Chrome Store?"
 Congratulations! The next steps will vary from library to library, so here are some links to help you further:
 
