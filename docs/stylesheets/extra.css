@@ -1,0 +1,18 @@
+[data-md-color-scheme="leidenuniv"] {
+  --md-primary-fg-color: #ffffff;
+  --md-footer-bg-color: #e3e3e3;
+  --md-footer-fg-color: #777;
+  --md-primary-bg-color: #001158;
+  --md-accent-fg-color: #7f88ab;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.md-tabs {
+  background-color: #7f88ab;
+  color: #ffffff;
+}
