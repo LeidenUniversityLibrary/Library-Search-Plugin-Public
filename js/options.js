@@ -26,7 +26,7 @@ $(document).ready(function () {
         if (
             $('#library').is(":checked")) {
             //change this url to match your library's! Here is Leiden's URL as an example for ExLibris Primo users - Old UI! But the same logic applies for Primo NEW UI
-            var newLibraryURL = 'http://catalogue.leidenuniv.nl/primo_library/libweb/action/search.do?fn=search&ct=search&initialSearch=true&mode=Basic&tab=all_content&indx=1&dum=true&srt=rank&vid=UBL_V1&frbg=&tb=t&scp.scps=scope%3A%28UBL_DSPACE%29%2Cscope%3A%28"UBL"%29%2Cscope%3A%28UBL_DTL%29%2Cscope%3A%28UBL_ALMA%29%2Cprimo_central_multiple_fe&vl%28freeText0%29=' + searchstring + '&source=LibrarySearchPluginPunblic'; //you can modofy &source to anything you like. This is useful to see how many users are coming to your catalogue via the plugin, in Google Analytics.
+            var newLibraryURL = 'http://catalogue.leidenuniv.nl/primo_library/libweb/action/search.do?fn=search&ct=search&initialSearch=true&mode=Basic&tab=all_content&indx=1&dum=true&srt=rank&vid=UBL_V1&frbg=&tb=t&scp.scps=scope%3A%28UBL_DSPACE%29%2Cscope%3A%28"UBL"%29%2Cscope%3A%28UBL_DTL%29%2Cscope%3A%28UBL_ALMA%29%2Cprimo_central_multiple_fe&vl%28freeText0%29=' + searchstring + '&source=LibrarySearchPluginPunblic'; //you can modify &source to anything you like. This is useful to see how many users are coming to your catalogue via the plugin, in Google Analytics.
             // Create the new tab
             chrome.tabs.create({
                 url: newLibraryURL
@@ -73,7 +73,7 @@ $(document).ready(function () {
 //Search definitions. %s is the variable that gets replaced by the search term.
 var searches = [
     {
-        title: "Search in the Library Catalogue", // Same as above: edit to match your library's url. Modify &soruce as well at the end. Remeber to keep '%s'
+        title: "Search in the Library Catalogue", // Same as above: edit to match your library's url. Modify &soruce as well at the end. Remember to keep '%s'
         url: "http://catalogue.leidenuniv.nl/primo_library/libweb/action/search.do?fn=search&ct=search&initialSearch=true&mode=Basic&tab=all_content&indx=1&dum=true&srt=rank&vid=UBL_V1&frbg=&tb=t&scp.scps=scope%3A%28UBL_DSPACE%29%2Cscope%3A%28%22UBL%22%29%2Cscope%3A%28UBL_DTL%29%2Cscope%3A%28UBL_ALMA%29%2Cprimo_central_multiple_fe&vl%28freeText0%29=%s&source=LibrarySearchPluginPublic"
   },
     {
