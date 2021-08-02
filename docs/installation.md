@@ -14,9 +14,9 @@ See the [official documentation](https://developer.chrome.com/docs/extensions/mv
 ## Firefox
 
 1. Open Firefox.
-2. enter "about:debugging" in the URL bar.
-3. click "This Firefox".
-4. click "Load Temporary Add-on".
-5. open the extension's directory and select any file inside the extension,or select the packaged extension (.zip file).
+2. Enter `about:debugging` in the URL bar.
+3. Click "This Firefox".
+4. Click "Load Temporary Add-on".
+5. Open the extension's directory and select any file inside the extension, or select the packaged extension (.zip file).
 
 See the [official documentation](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
