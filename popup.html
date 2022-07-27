@@ -2,47 +2,100 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
     <title>Library Search Plugin Public</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <script type="text/javascript" src="js/gtm.js"></script> If you use Google Tag Manager, uncomment this line-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/options.js"></script>
 </head>
 
 <body class="main">
-    <!-- <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=******" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript> if you use Google Tag Manager uncomment this section and adapt your id -->
-    <div id="container" class="initialized">
-        <div id="branding">
-            <div id="logo">
-                <a href="https://www.addyourlibrarywebsitehere.com" target="_blank"> <!-- add a link to your library's website here -->
-                    <img alt="" src="images/icons/university_logo.png"> <!-- don't forget your logo! -->
-                </a>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-3">
+        <a class="navbar-brand" href="https://www.example.com/" target="_blank"><img
+                alt="Library University Logo" src="images/icons/university_logo.png" style="max-height: 2em"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.library.example.com/" target="_blank">Library
+                        Home <sup><i class="fas fa-external-link-alt"></i></sup></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.library.example.com/"
+                        target="_blank">Library Announcements <sup><i class="fas fa-external-link-alt"></i></sup></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://www.library.example.com/"
+                        target="_blank">Ask-a-Librarian <sup><i class="fas fa-external-link-alt"></i></sup></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://www.library.example.com/"
+                        target="_blank">Plugin Help <sup><i class="fas fa-external-link-alt"></i></sup></a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="searchInputContainer">
+        <div class="searchBox">
+            <input id="searchInput" class="dialogInput searchInput" type="text"
+                placeholder="Books, articles, databases..." />
+        </div>
+        <div class="emptySearch alert alert-warning" role="alert" style="display:none">
+            Please add a search term.
+        </div>
+        <div class="emptySelection alert alert-warning" role="alert" style="display:none">
+            Please select a search-engine.
+        </div>
+
+        <div class="searchOptions">
+            <h5>Choose one or multiple search-engines:</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Library University Catalogue" id="library">
+                <label class="form-check-label" for="library">Library University Libraries - Catalogue</label>
             </div>
-            <div id="title">
-                <h1>Library Search Plugin Public</h1>
-                <!-- update with your plugin's name -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Web of Science" id="wos">
+                <label class="form-check-label" for="wos">Web of Science</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Google Scholar" id="scholar">
+                <label class="form-check-label" for="scholar">Google Scholar</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="PubMed" id="pubmed">
+                <label class="form-check-label" for="pubmed">PubMed</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="WorldCat" id="worldcat">
+                <label class="form-check-label" for="worldcat">WorldCat</label>
+            </div>
+            <div class="searchButton">
+                <div class="d-grid gap-2">
+                    <button type="submit" id="btnOpenNewTab" class="btn btn-outline-primary">Search <i
+                            class="fas fa-search"></i></button>
+                </div>
             </div>
         </div>
-        <div id="searchContainer" class="header">
-            <div class="searchInputContainer">
-                <input id="searchInput" class="dialogInput searchInput" type="text" placeholder="Books, articles, databases..." /><br>
-                <form>
-                    <p>Choose where to search:</p>
-                    <input type="radio" name="chooseone" id="library"><label for="library"> University Catalogue</label><br>
-                    <input type="radio" name="chooseone" id="scholar"><label for="scholar"> Google Scholar</label><br>
-                    <input type="radio" name="chooseone" id="worldcat"><label for="worldcat"> WorldCat</label><br>
-                    <input type="radio" name="chooseone" id="pubmed"><label for="pubmed"> PubMed</label><br>
-                </form>
-                <br>
-                <input type="submit" id="btnOpenNewTab" value="search" />
+        <div class="getAccess">
+            <div id="getAccessText">
+                <p>Unlock your library's subscribed scholarly resources you have found without using the library
+                    catalogue!
+                </p>
             </div>
-        </div>
-        <div id="instructions">
-            <h3>How to use this assistant</h3>
-            <p>Type your query in the search box, choose your favourite search engine, press enter or "search"!</p>
-            <h3>or</h3>
-            <p>Select terms in the text you are reading and search using the right-click Library Search Plugin Public menu.</p>
+            <div class="d-grid gap-2">
+                <button type="submit" id="btnGetAccess" class="btn btn-outline-primary">UBL Get Access <i
+                        class="fas fa-lock-open"></i></button>
+            </div>
         </div>
     </div>
 </body>
