@@ -1,27 +1,29 @@
 {
-    "manifest_version": 2, // do not delete unless you know what you are doing! :)
+    "manifest_version": 3,
 
-    "name": "Library Search Plugin Public", // Rename with your chosen title
-    "description": "Search the your University Catalogue at any moment without leaving your current page!", // Modify this text to explain what this plugin is about
-    "version": "1.0.0",
-    "author": "Giulio Menna, Leiden University Libraries", // I am the original author of this plugin, but you may change the name to your library's, or a department, etc. Remember to mention us somewhere as the source of this code though!
-    "content_security_policy": "script-src 'self' https://www.google-analytics.com https://ssl.google-analytics.com https://code.jquery.com/ https://www.googletagmanager.com; object-src 'self'", // Delicate point: you may remove references to Google Analytics and Google Tag manager if you do not use them, but you will need code.jquery.com!
-    "browser_action": {
-        "default_icon": "/images/icons/icon128.png", // see "icons" section hereunder
-        "default_popup": "popup.html", // do not delete unless you know what you are doing! :)
-        "default_title": "Library Search Plugin Public" // Rename with your chosen title
+    "name": "Library Search Plugin",
+    "description": "Search the your Library's Catalogue at any moment without leaving your current page!",
+    "version": "2022.07.27",
+    "author": "Leiden University Libraries",
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "action": {
+        "default_icon": "/images/icons/icon128.png",
+        "default_popup": "popup.html",
+        "default_title": "Library Search Plugin"
     },
     "icons": {
-        "16": "/images/icons/icon16.png", // the following lines determine the way your icons look. Square icons only; 16x16px, 48x48px, 128x128px
-        "48": "/images/icons/icon48.png", // you will have to generate these icons yourself.
-        "128": "/images/icons/icon128.png" 
+        "16": "/images/icons/icon16.png",
+        "48": "/images/icons/icon48.png",
+        "128": "/images/icons/icon128.png"
     },
     "background": {
-        "page": "popup.html" // do not delete unless you know what you are doing! :)
+        "service_worker": "js/background.js"
     },
+    "minimum_chrome_version": "92",
     "permissions": [
-    "contextMenus", // allows the plugin to use context menus when the user right-clicks
-    "activeTab" // see https://developer.chrome.com/extensions/activeTab - do no remove!
-    // "https://www.googletagmanager.com/" if your library uses GTM, keep this here. If not, feel free to delete this line
-  ]
+    "contextMenus",
+    "tabs",
+    "storage"]
 }

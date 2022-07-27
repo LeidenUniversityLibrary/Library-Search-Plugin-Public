@@ -1,0 +1,126 @@
+html {
+    width: auto;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+
+body {
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+
+#searchContainer {
+    padding: 20px;
+}
+
+#searchInput {
+    font-style: italic;
+    width: 100%;
+}
+
+input[type=text] {
+    padding: 5px;
+    border: 2px solid #d3d3d3;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: 5px 15px;
+    cursor: pointer;
+    border: 0 none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #001158;
+    color: #fff;
+}
+
+h4 {
+    font-size: 20px;
+    color: #001158;
+    font-weight: 300;
+}
+
+.searchBox {
+    background-color: #7f88ab;
+    padding: 20px;
+    padding-top: 106px;
+}
+
+.searchOptions {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.getAccess {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 2px solid #d3d3d3;
+}
+
+.searchButton {
+    margin-top: 1em;
+}
+
+/* icons */
+
+i.fas.fa-external-link-alt {
+    font-size: 0.6em;
+}
+
+/* bootstrap changes */
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #fff !important;
+    border: 1px solid #d3d3d3;
+}
+
+.btn-outline-primary {
+    color: #b27f2b;
+    background-color: transparent;
+    background-image: none;
+    border-color: #b27f2b;
+}
+
+.btn-outline-primary:hover {
+    background-color: #e5c592;
+    border-color: #e5c592;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle {
+    background-color: #e5c592;
+    border-color: #e5c592;
+}
+
+.btn-outline-primary.focus,
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem #e5c592;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #e5c592;
+}
+
+input[type=checkbox],
+input[type=radio],
+label.form-check-label {
+    cursor: pointer;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #b27f2b;
+}
+
+.install_welcome {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 200px;
+}
